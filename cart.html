@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart | Biteora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Shopping Cart Header -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Bite<span>ora</span><span class="logo-dot">.</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="cart.html" class="active">My Cart</a>
+            </nav>
+
+            <a href="menu.html" class="order-btn">
+                Continue Shopping
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- Cart Page Heading -->
+    <section class="cart-heading">
+        <div class="container">
+            <span class="section-label">YOUR SELECTION</span>
+            <h1>Shopping <span>Cart</span></h1>
+            <p>Review your selected items before placing your order.</p>
+        </div>
+    </section>
+
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+
+        <div class="container cart-layout">
+
+            <div class="cart-items-area">
+
+                <div class="cart-header">
+                    <h2>Your Items</h2>
+                    <span id="item-count">0 Items</span>
+                </div>
+
+                <div id="cart-items"></div>
+
+                <div id="empty-cart" class="empty-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h3>Your Cart Is Empty</h3>
+                    <p>Looks like you haven't added anything yet.</p>
+                    <a href="menu.html" class="primary-btn">
+                        Explore Our Menu
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- Order Summary -->
+            <aside class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">Rs. 0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery Charges</span>
+                    <strong id="delivery">Rs. 0</strong>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <strong id="total">Rs. 0</strong>
+                </div>
+
+                <button id="checkout-btn" class="checkout-btn" disabled>
+                    Proceed to Checkout
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <a href="menu.html" class="continue-link">
+                    Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- Website Footer -->
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>© 2026 Biteora. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+     <!-- Floating WhatsApp Button -->
+<a href="#" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <script src="cart.js"></script>
+
+</body>
+</html>

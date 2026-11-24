@@ -1,0 +1,340 @@
+
+/* ========================================
+   BITEORA | Food Menu Styles
+======================================== */
+
+/* Menu Hero */
+
+.menu-hero {
+    padding: 90px 0 75px;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(245,166,35,0.12), transparent 55%),
+        #101010;
+}
+
+.menu-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.menu-hero h1 span {
+    color: var(--primary);
+}
+
+.menu-hero p {
+    color: var(--gray);
+    font-size: 14px;
+    max-width: 520px;
+    margin: auto;
+}
+
+.menu-breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.menu-breadcrumb i {
+    color: var(--primary);
+}
+
+.menu-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+/* Menu Section */
+
+.menu-section {
+    background: #151515;
+}
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background: #202020;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #cccccc;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #111;
+}
+
+/* Menu Product Grid */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: #1d1d1d;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(245,166,35,0.5);
+}
+
+.menu-image {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.07);
+}
+
+.food-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary);
+    color: #111;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.menu-details {
+    padding: 22px;
+}
+
+.menu-details .food-category {
+    color: var(--primary);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.menu-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.menu-details p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 44px;
+}
+
+.menu-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.menu-price strong {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.add-cart {
+    height: 38px;
+    width: 38px;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: #111;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.add-cart:hover {
+    background: var(--primary-dark);
+    transform: rotate(90deg);
+}
+
+/* Product Filtering */
+
+.menu-card.hide {
+    display: none;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .menu-hero {
+        padding: 65px 0;
+    }
+
+    .menu-hero h1 {
+        font-size: 38px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image {
+        height: 250px;
+    }
+
+    .menu-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+}
+
+
+/* ========================================
+   BITEORA | Cart Success Notification
+======================================== */
+
+.cart-notification {
+    position: fixed;
+    top: 100px;
+    right: 25px;
+    width: 330px;
+    max-width: calc(100% - 30px);
+    padding: 18px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: 0.3s ease;
+}
+
+.cart-notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-content > i {
+    color: #25D366;
+    font-size: 27px;
+}
+
+.notification-content strong {
+    color: #fff;
+    font-size: 15px;
+}
+
+.notification-content p {
+    color: #bbb;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.notification-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px;
+    background: var(--primary);
+    color: #101010;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 7px;
+    transition: 0.3s ease;
+}
+
+.notification-link:hover {
+    background: #fff;
+}
+
+@media (max-width: 480px) {
+    .cart-notification {
+        top: 85px;
+        right: 15px;
+        width: 300px;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+}

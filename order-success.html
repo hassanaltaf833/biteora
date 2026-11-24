@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed | Biteora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order-success.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Main Navigation -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Bite<span>ora</span><span class="logo-dot">.</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="cart.html">My Cart</a>
+            </nav>
+
+            <a href="menu.html" class="order-btn">
+                Order More
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- Order Success Section -->
+    <main class="success-section">
+
+        <div class="container">
+
+            <div class="success-card">
+
+                <div class="receipt-brand">
+               <h2>BITE<span>ORA</span>.</h2>
+               <p>DELICIOUS FOOD, DELIVERED WITH LOVE</p>
+               <div class="receipt-brand-line"></div>
+               </div> 
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <span class="section-label">ORDER CONFIRMATION</span>
+
+                <h1>
+                    Order Placed
+                    <span>Successfully!</span>
+                </h1>
+
+                <p class="success-message">
+                    Thank you for choosing Biteora.
+                    Your order has been successfully placed.
+                </p>
+
+
+                <!-- Order Reference -->
+                <div class="order-id-box">
+                    <span>YOUR ORDER REFERENCE</span>
+                    <strong id="order-id">Loading...</strong>
+                </div>
+
+
+                <div class="success-divider"></div>
+
+
+                <!-- Customer Information -->
+                <div class="success-details">
+
+                    <h2>
+                        <i class="fa-regular fa-user"></i>
+                        Customer Details
+                    </h2>
+
+                    <div class="success-row">
+                        <span>Customer Name</span>
+                        <strong id="customer-name">-</strong>
+                    </div>
+
+                    <div class="success-row">
+                        <span>Phone Number</span>
+                        <strong id="customer-phone">-</strong>
+                    </div>
+
+                    <div class="success-row">
+                        <span>Delivery Address</span>
+                        <strong id="customer-address">-</strong>
+                    </div>
+
+                    <div class="success-row">
+                        <span>Payment Method</span>
+                        <strong id="payment-method">-</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="success-divider"></div>
+
+
+                <!-- Ordered Products -->
+                <div class="success-items-section">
+
+                    <h2>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Order Summary
+                    </h2>
+
+                    <div id="success-items"></div>
+
+                </div>
+
+
+                <div class="success-divider"></div>
+
+
+                <!-- Final Payment -->
+                <div class="success-total">
+
+                    <span>Total Amount</span>
+
+                    <strong id="order-total">Rs. 0</strong>
+
+                </div>
+
+
+                <!-- Delivery Information -->
+                <div class="delivery-note">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <p>
+                        Your order details have been saved in this browser.
+                        Our team will prepare your delicious meal.
+                    </p>
+
+                </div>
+
+
+                <!-- Customer Actions -->
+                <div class="success-actions">
+
+                    <button type="button" class="print-btn" onclick="window.print()">
+                        <i class="fa-solid fa-print"></i>
+                        Print Receipt
+                    </button>
+
+                    <a href="index.html" class="home-btn">
+                        Back to Home
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Website Footer -->
+    <footer class="footer">
+
+        <div class="container footer-bottom">
+
+            <p>© 2026 Biteora. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Order Confirmation Logic -->
+    <script src="order-success.js"></script>
+
+</body>
+</html>
+
